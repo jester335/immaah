@@ -6,26 +6,11 @@
   <title>IMMAAH — Формула идеального интерьера</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- ── Global SVG defs (gradients, reused across page) ───────── -->
-<svg width="0" height="0" style="position:absolute;overflow:hidden">
-  <defs>
-    <linearGradient id="gGold" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%"   stop-color="#C2973B"/>
-      <stop offset="45%"  stop-color="#E2B854"/>
-      <stop offset="65%"  stop-color="#EBCA83"/>
-      <stop offset="100%" stop-color="#D09F26"/>
-    </linearGradient>
-    <linearGradient id="gGoldV" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%"   stop-color="#EBCA83"/>
-      <stop offset="100%" stop-color="#C2973B"/>
-    </linearGradient>
-  </defs>
-</svg>
 
 <!-- ════════════════════════════════════════════════════════════
      HEADER
@@ -35,21 +20,7 @@
 
     <!-- Logo -->
     <a href="#" class="h-logo">
-      <svg viewBox="0 0 100 88" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- Left wing -->
-        <path d="M48 36 C36 30 20 24 4 28 L14 33 C22 31 34 34 46 41Z" fill="url(#gGold)"/>
-        <!-- Right wing -->
-        <path d="M52 36 C64 30 80 24 96 28 L86 33 C78 31 66 34 54 41Z" fill="url(#gGold)"/>
-        <!-- Body (kite) -->
-        <path d="M44 33 L50 22 L56 33 L50 46Z" fill="url(#gGold)"/>
-        <!-- Head -->
-        <circle cx="50" cy="20" r="5" fill="url(#gGold)"/>
-        <!-- Outer mountain -->
-        <path d="M8 74 L50 44 L92 74" stroke="url(#gGold)" stroke-width="2.8" stroke-linejoin="round"/>
-        <!-- Inner peak -->
-        <path d="M28 74 L50 57 L72 74" stroke="url(#gGold)" stroke-width="2.2" stroke-linejoin="round"/>
-      </svg>
-      <span class="h-logo-text">IMMAAH</span>
+      <img src="img/logo.png" alt="IMMAAH">
     </a>
 
     <!-- Nav -->
@@ -74,42 +45,88 @@
      HERO
 ════════════════════════════════════════════════════════════ -->
 <section class="hero">
+
+  <!-- Боковые вигнеты -->
+  <div class="hero-vignette-left"></div>
+  <div class="hero-vignette-right"></div>
+
+  <!-- Левый декоративный элемент -->
+  <div class="hero-side hero-side-l">
+    <div class="hero-side-diamond"></div>
+    <div class="hero-side-line"></div>
+    <div class="hero-side-diamond hero-side-diamond--mid"></div>
+    <div class="hero-side-line"></div>
+    <div class="hero-side-diamond"></div>
+  </div>
+
+  <!-- Правый декоративный элемент -->
+  <div class="hero-side hero-side-r">
+    <div class="hero-side-diamond"></div>
+    <div class="hero-side-line"></div>
+    <div class="hero-side-diamond hero-side-diamond--mid"></div>
+    <div class="hero-side-line"></div>
+    <div class="hero-side-diamond"></div>
+  </div>
+
   <div class="hero-content">
+
+    <!-- Prelabel -->
+    <p class="hero-prelabel">Текстиль премиум класса</p>
 
     <!-- Logo mark -->
     <div class="hero-logo-mark">
-      <svg viewBox="0 0 100 88" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M48 36 C36 30 20 24 4 28 L14 33 C22 31 34 34 46 41Z" fill="url(#gGold)"/>
-        <path d="M52 36 C64 30 80 24 96 28 L86 33 C78 31 66 34 54 41Z" fill="url(#gGold)"/>
-        <path d="M44 33 L50 22 L56 33 L50 46Z" fill="url(#gGold)"/>
-        <circle cx="50" cy="20" r="5" fill="url(#gGold)"/>
-        <path d="M8 74 L50 44 L92 74" stroke="url(#gGold)" stroke-width="2.8" stroke-linejoin="round"/>
-        <path d="M28 74 L50 57 L72 74" stroke="url(#gGold)" stroke-width="2.2" stroke-linejoin="round"/>
-      </svg>
+      <img src="img/logo-2.png" alt="IMMAAH">
     </div>
 
-    <!-- Top line -->
-    <div class="hero-line"></div>
+    <!-- Ornate frame + brand name -->
+    <div class="hero-ornament">
+      <img src="img/hero-bg-2-no-text-v2.png" class="hero-ornament-img" alt="">
+      <h1 class="hero-brand shimmer">IMMAAH</h1>
+    </div>
 
-    <!-- Brand name -->
-    <h1 class="hero-brand shimmer">IMMAAH</h1>
+    <!-- Tagline с боковыми линиями -->
+    <div class="hero-tagline-row">
+      <span class="hero-tl-line"></span>
+      <p class="hero-tagline">Формула идеального интерьера</p>
+      <span class="hero-tl-line"></span>
+    </div>
 
-    <p class="hero-tagline">Формула идеального интерьера</p>
-
-    <!-- Bottom line -->
+    <!-- Широкая полоса-разделитель -->
     <div class="hero-line"></div>
 
     <!-- CTAs -->
-    <div class="hero-actions" style="margin-top:36px">
+    <div class="hero-actions">
       <a href="#catalog" class="btn btn-gold">Смотреть каталог</a>
       <a href="#contacts" class="btn btn-ghost">Оптовые заказы</a>
+    </div>
+
+    <!-- Статистика -->
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <strong>11</strong>
+        <span>моделей</span>
+      </div>
+      <div class="hero-stat-sep"></div>
+      <div class="hero-stat">
+        <strong>4</strong>
+        <span>цвета</span>
+      </div>
+      <div class="hero-stat-sep"></div>
+      <div class="hero-stat">
+        <strong>от 50 шт</strong>
+        <span>оптовый заказ</span>
+      </div>
+      <div class="hero-stat-sep"></div>
+      <div class="hero-stat">
+        <strong>вся Россия</strong>
+        <span>доставка</span>
+      </div>
     </div>
 
   </div>
 
   <!-- Scroll indicator -->
   <div class="scroll-hint">
-    <span>Scroll</span>
     <div class="scroll-needle"></div>
   </div>
 </section>
@@ -137,85 +154,6 @@
 </div>
 
 <!-- ════════════════════════════════════════════════════════════
-     ADVANTAGES
-════════════════════════════════════════════════════════════ -->
-<section class="advantages">
-  <div class="container">
-
-    <div class="section-head fade">
-      <span class="label">Почему IMMAAH</span>
-      <h2>Роскошь, доступная оптом</h2>
-      <div class="divider"><div class="divider-diamond"></div></div>
-    </div>
-
-    <div class="adv-grid">
-
-      <div class="adv-item fade" data-delay="1">
-        <div class="adv-icon">
-          <!-- Icon: weave/fabric -->
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="8" y="8" width="32" height="32" rx="2"/>
-            <line x1="8" y1="16" x2="40" y2="16"/>
-            <line x1="8" y1="24" x2="40" y2="24"/>
-            <line x1="8" y1="32" x2="40" y2="32"/>
-            <line x1="16" y1="8" x2="16" y2="40"/>
-            <line x1="24" y1="8" x2="24" y2="40"/>
-            <line x1="32" y1="8" x2="32" y2="40"/>
-          </svg>
-        </div>
-        <p class="adv-title">Жаккардовое плетение</p>
-        <p class="adv-text">Рельефный узор вплетён в структуру ткани — не выцветает, не теряет рисунка со временем. Атласная поверхность с мягким благородным блеском.</p>
-      </div>
-
-      <div class="adv-item fade" data-delay="2">
-        <div class="adv-icon">
-          <!-- Icon: boxes/wholesale -->
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M24 4 L44 14 L44 34 L24 44 L4 34 L4 14 Z"/>
-            <line x1="4" y1="14" x2="24" y2="24"/>
-            <line x1="44" y1="14" x2="24" y2="24"/>
-            <line x1="24" y1="24" x2="24" y2="44"/>
-            <line x1="14" y1="9" x2="34" y2="19"/>
-          </svg>
-        </div>
-        <p class="adv-title">Оптовые поставки</p>
-        <p class="adv-text">Заказы от 50 штук с гибкой системой скидок. Три ценовых уровня: 50–1000 шт, 1001–5000 шт, от 5001 шт. Работаем с ИП и юрлицами.</p>
-      </div>
-
-      <div class="adv-item fade" data-delay="3">
-        <div class="adv-icon">
-          <!-- Icon: Russia/map pin -->
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="24" cy="20" r="8"/>
-            <path d="M24 28 C24 28 10 38 10 44 L38 44 C38 38 24 28 24 28Z"/>
-            <circle cx="24" cy="20" r="2.5" fill="currentColor"/>
-          </svg>
-        </div>
-        <p class="adv-title">Доставка по России</p>
-        <p class="adv-text">СДЭК, Почта России, Яндекс Доставка и самовывоз. Расчёт стоимости при оформлении заказа. Упаковка гарантирует сохранность товара.</p>
-      </div>
-
-      <div class="adv-item fade" data-delay="4">
-        <div class="adv-icon">
-          <!-- Icon: wash/care -->
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="8" y="12" width="32" height="28" rx="3"/>
-            <path d="M8 20 Q14 17 20 20 Q26 23 32 20 Q38 17 40 20"/>
-            <circle cx="24" cy="30" r="5"/>
-            <path d="M15 12 L15 7"/>
-            <path d="M33 12 L33 7"/>
-          </svg>
-        </div>
-        <p class="adv-title">Лёгкий уход</p>
-        <p class="adv-text">Машинная стирка при 30°C без потери вида и размера. Размер стабилен после стирки. Гладить при средней температуре.</p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- ════════════════════════════════════════════════════════════
      CATALOG
 ════════════════════════════════════════════════════════════ -->
 <section class="catalog" id="catalog">
@@ -235,12 +173,7 @@
       <!-- SK-1 -->
       <div class="card fade" data-delay="1">
         <div class="card-img">
-          <div class="card-placeholder"></div>
-          <div class="card-color-bg" style="background:linear-gradient(135deg,#F5F0E8,#E8E0D0)"></div>
-          <div class="card-pattern-icon">
-            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="24" cy="24" r="10"/><path d="M24 14 C20 18 14 20 14 24 C14 28 20 30 24 34 C28 30 34 28 34 24 C34 20 28 18 24 14Z"/><circle cx="24" cy="24" r="3" fill="currentColor" opacity=".3"/></svg>
-            <p class="card-pattern-label">Вензель</p>
-          </div>
+          <img src="img/products/1.jpg" alt="Скатерть белая вензель SK-1" loading="lazy">
           <span class="card-label">SK-1</span>
         </div>
         <div class="card-info">
@@ -262,12 +195,7 @@
       <!-- SK-2 -->
       <div class="card fade" data-delay="2">
         <div class="card-img">
-          <div class="card-placeholder"></div>
-          <div class="card-color-bg" style="background:linear-gradient(135deg,#F0E4C0,#E5D4A0)"></div>
-          <div class="card-pattern-icon">
-            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="24" cy="24" r="10"/><path d="M24 14 C20 18 14 20 14 24 C14 28 20 30 24 34 C28 30 34 28 34 24 C34 20 28 18 24 14Z"/><circle cx="24" cy="24" r="3" fill="currentColor" opacity=".3"/></svg>
-            <p class="card-pattern-label">Вензель</p>
-          </div>
+          <img src="img/products/3.jpg" alt="Скатерть ваниль вензель SK-2" loading="lazy">
           <span class="card-label">SK-2</span>
         </div>
         <div class="card-info">
@@ -290,12 +218,7 @@
       <!-- SK-3 -->
       <div class="card fade" data-delay="3">
         <div class="card-img">
-          <div class="card-placeholder"></div>
-          <div class="card-color-bg" style="background:linear-gradient(135deg,#E8D0B8,#D4B8A4)"></div>
-          <div class="card-pattern-icon">
-            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="24" cy="24" r="10"/><path d="M24 14 C20 18 14 20 14 24 C14 28 20 30 24 34 C28 30 34 28 34 24 C34 20 28 18 24 14Z"/><circle cx="24" cy="24" r="3" fill="currentColor" opacity=".3"/></svg>
-            <p class="card-pattern-label">Вензель</p>
-          </div>
+          <img src="img/products/2.jpg" alt="Скатерть бежево-розовая вензель SK-3" loading="lazy">
           <span class="card-label">SK-3</span>
         </div>
         <div class="card-info">
@@ -318,12 +241,7 @@
       <!-- SK-4 -->
       <div class="card fade" data-delay="1">
         <div class="card-img">
-          <div class="card-placeholder"></div>
-          <div class="card-color-bg" style="background:linear-gradient(135deg,#C8A07A,#A88060)"></div>
-          <div class="card-pattern-icon">
-            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="24" cy="24" r="10"/><path d="M24 14 C20 18 14 20 14 24 C14 28 20 30 24 34 C28 30 34 28 34 24 C34 20 28 18 24 14Z"/><circle cx="24" cy="24" r="3" fill="currentColor" opacity=".3"/></svg>
-            <p class="card-pattern-label">Вензель</p>
-          </div>
+          <img src="img/products/6.jpg" alt="Скатерть капучино вензель SK-4" loading="lazy">
           <span class="card-label">SK-4</span>
         </div>
         <div class="card-info">
@@ -345,12 +263,7 @@
       <!-- SK-5 -->
       <div class="card fade" data-delay="2">
         <div class="card-img">
-          <div class="card-placeholder"></div>
-          <div class="card-color-bg" style="background:linear-gradient(135deg,#F2EEE4,#E5DFD4)"></div>
-          <div class="card-pattern-icon">
-            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="24" cy="14" r="4"/><circle cx="34" cy="24" r="4"/><circle cx="24" cy="34" r="4"/><circle cx="14" cy="24" r="4"/><circle cx="24" cy="24" r="3"/></svg>
-            <p class="card-pattern-label">Цветочек</p>
-          </div>
+          <img src="img/products/4.jpg" alt="Скатерть белая цветочек SK-5" loading="lazy">
           <span class="card-label">SK-5</span>
         </div>
         <div class="card-info">
@@ -372,12 +285,7 @@
       <!-- SK-6 -->
       <div class="card fade" data-delay="3">
         <div class="card-img">
-          <div class="card-placeholder"></div>
-          <div class="card-color-bg" style="background:linear-gradient(135deg,#EEE0B0,#E4D4A0)"></div>
-          <div class="card-pattern-icon">
-            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="24" cy="14" r="4"/><circle cx="34" cy="24" r="4"/><circle cx="24" cy="34" r="4"/><circle cx="14" cy="24" r="4"/><circle cx="24" cy="24" r="3"/></svg>
-            <p class="card-pattern-label">Цветочек</p>
-          </div>
+          <img src="img/products/5.jpg" alt="Скатерть кремовая цветочек SK-6" loading="lazy">
           <span class="card-label">SK-6</span>
         </div>
         <div class="card-info">
@@ -401,6 +309,81 @@
 
     <div class="catalog-more fade">
       <a href="#contacts" class="btn btn-ghost">Смотреть все 11 товаров</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     ADVANTAGES
+════════════════════════════════════════════════════════════ -->
+<section class="advantages">
+  <div class="container">
+
+    <div class="section-head fade">
+      <span class="label">Почему IMMAAH</span>
+      <h2>Роскошь, доступная оптом</h2>
+      <div class="divider"><div class="divider-diamond"></div></div>
+    </div>
+
+    <div class="adv-grid">
+
+      <div class="adv-item fade" data-delay="1">
+        <div class="adv-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="8" y="8" width="32" height="32" rx="2"/>
+            <line x1="8" y1="16" x2="40" y2="16"/>
+            <line x1="8" y1="24" x2="40" y2="24"/>
+            <line x1="8" y1="32" x2="40" y2="32"/>
+            <line x1="16" y1="8" x2="16" y2="40"/>
+            <line x1="24" y1="8" x2="24" y2="40"/>
+            <line x1="32" y1="8" x2="32" y2="40"/>
+          </svg>
+        </div>
+        <p class="adv-title">Жаккардовое плетение</p>
+        <p class="adv-text">Рельефный узор вплетён в структуру ткани — не выцветает, не теряет рисунка со временем. Атласная поверхность с мягким благородным блеском.</p>
+      </div>
+
+      <div class="adv-item fade" data-delay="2">
+        <div class="adv-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M24 4 L44 14 L44 34 L24 44 L4 34 L4 14 Z"/>
+            <line x1="4" y1="14" x2="24" y2="24"/>
+            <line x1="44" y1="14" x2="24" y2="24"/>
+            <line x1="24" y1="24" x2="24" y2="44"/>
+            <line x1="14" y1="9" x2="34" y2="19"/>
+          </svg>
+        </div>
+        <p class="adv-title">Оптовые поставки</p>
+        <p class="adv-text">Заказы от 50 штук с гибкой системой скидок. Три ценовых уровня: 50–1000 шт, 1001–5000 шт, от 5001 шт. Работаем с ИП и юрлицами.</p>
+      </div>
+
+      <div class="adv-item fade" data-delay="3">
+        <div class="adv-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="24" cy="20" r="8"/>
+            <path d="M24 28 C24 28 10 38 10 44 L38 44 C38 38 24 28 24 28Z"/>
+            <circle cx="24" cy="20" r="2.5" fill="currentColor"/>
+          </svg>
+        </div>
+        <p class="adv-title">Доставка по России</p>
+        <p class="adv-text">СДЭК, Почта России, Яндекс Доставка и самовывоз. Расчёт стоимости при оформлении заказа. Упаковка гарантирует сохранность товара.</p>
+      </div>
+
+      <div class="adv-item fade" data-delay="4">
+        <div class="adv-icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="8" y="12" width="32" height="28" rx="3"/>
+            <path d="M8 20 Q14 17 20 20 Q26 23 32 20 Q38 17 40 20"/>
+            <circle cx="24" cy="30" r="5"/>
+            <path d="M15 12 L15 7"/>
+            <path d="M33 12 L33 7"/>
+          </svg>
+        </div>
+        <p class="adv-title">Лёгкий уход</p>
+        <p class="adv-text">Машинная стирка при 30°C без потери вида и размера. Размер стабилен после стирки. Гладить при средней температуре.</p>
+      </div>
+
     </div>
 
   </div>
@@ -437,15 +420,7 @@
       <div class="about-emblem fade" data-delay="2">
         <div class="emblem-ring">
           <div class="emblem-inner">
-            <svg viewBox="0 0 100 88" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M48 36 C36 30 20 24 4 28 L14 33 C22 31 34 34 46 41Z" fill="url(#gGold)"/>
-              <path d="M52 36 C64 30 80 24 96 28 L86 33 C78 31 66 34 54 41Z" fill="url(#gGold)"/>
-              <path d="M44 33 L50 22 L56 33 L50 46Z" fill="url(#gGold)"/>
-              <circle cx="50" cy="20" r="5" fill="url(#gGold)"/>
-              <path d="M8 74 L50 44 L92 74" stroke="url(#gGold)" stroke-width="2.8" stroke-linejoin="round"/>
-              <path d="M28 74 L50 57 L72 74" stroke="url(#gGold)" stroke-width="2.2" stroke-linejoin="round"/>
-            </svg>
-            <p class="emblem-name shimmer">IMMAAH</p>
+            <img src="img/logo.png" alt="IMMAAH">
             <p class="emblem-sub">Формула идеального интерьера</p>
           </div>
         </div>
@@ -548,25 +523,25 @@
       <form style="display:flex;flex-direction:column;gap:16px">
         <input type="text" placeholder="Имя"
           style="background:var(--bg-card);border:1px solid var(--b-dim);color:var(--text-hi);
-                 padding:14px 18px;font-family:'Montserrat',sans-serif;font-size:.82rem;
+                 padding:14px 18px;font-family:'Raleway',sans-serif;font-size:.82rem;
                  border-radius:2px;outline:none;transition:border-color .25s"
           onfocus="this.style.borderColor='var(--b-mid)'"
           onblur="this.style.borderColor='var(--b-dim)'">
         <input type="tel" placeholder="Телефон"
           style="background:var(--bg-card);border:1px solid var(--b-dim);color:var(--text-hi);
-                 padding:14px 18px;font-family:'Montserrat',sans-serif;font-size:.82rem;
+                 padding:14px 18px;font-family:'Raleway',sans-serif;font-size:.82rem;
                  border-radius:2px;outline:none;transition:border-color .25s"
           onfocus="this.style.borderColor='var(--b-mid)'"
           onblur="this.style.borderColor='var(--b-dim)'">
         <input type="email" placeholder="Email"
           style="background:var(--bg-card);border:1px solid var(--b-dim);color:var(--text-hi);
-                 padding:14px 18px;font-family:'Montserrat',sans-serif;font-size:.82rem;
+                 padding:14px 18px;font-family:'Raleway',sans-serif;font-size:.82rem;
                  border-radius:2px;outline:none;transition:border-color .25s"
           onfocus="this.style.borderColor='var(--b-mid)'"
           onblur="this.style.borderColor='var(--b-dim)'">
         <textarea placeholder="Комментарий к заказу" rows="4"
           style="background:var(--bg-card);border:1px solid var(--b-dim);color:var(--text-hi);
-                 padding:14px 18px;font-family:'Montserrat',sans-serif;font-size:.82rem;
+                 padding:14px 18px;font-family:'Raleway',sans-serif;font-size:.82rem;
                  border-radius:2px;outline:none;resize:vertical;transition:border-color .25s"
           onfocus="this.style.borderColor='var(--b-mid)'"
           onblur="this.style.borderColor='var(--b-dim)'"></textarea>
@@ -592,15 +567,8 @@
 
       <!-- Brand -->
       <div class="footer-brand">
-        <svg viewBox="0 0 100 88" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M48 36 C36 30 20 24 4 28 L14 33 C22 31 34 34 46 41Z" fill="url(#gGold)"/>
-          <path d="M52 36 C64 30 80 24 96 28 L86 33 C78 31 66 34 54 41Z" fill="url(#gGold)"/>
-          <path d="M44 33 L50 22 L56 33 L50 46Z" fill="url(#gGold)"/>
-          <circle cx="50" cy="20" r="5" fill="url(#gGold)"/>
-          <path d="M8 74 L50 44 L92 74" stroke="url(#gGold)" stroke-width="2.8" stroke-linejoin="round"/>
-          <path d="M28 74 L50 57 L72 74" stroke="url(#gGold)" stroke-width="2.2" stroke-linejoin="round"/>
-        </svg>
-        <p class="footer-brand-name shimmer">IMMAAH</p>
+        <img src="img/logo.png" alt="IMMAAH" style="height:56px;width:auto;filter:drop-shadow(0 0 8px rgba(210,159,38,.3))">
+        <p class="footer-brand-name shimmer" style="display:none"></p>
         <p class="footer-brand-tag">Формула идеального интерьера</p>
         <p class="footer-brand-desc">Оптовые поставки премиальных жаккардовых скатертей. Работаем с ИП и юрлицами по всей России.</p>
       </div>
