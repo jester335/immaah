@@ -1,0 +1,398 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">Товар — IMMAAH</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header id="header">
+  <div class="header-inner">
+    <a href="index.html" class="h-logo"><img src="img/logo.png" alt="IMMAAH"></a>
+    <nav class="h-nav">
+      <a href="catalog.html" class="active">Каталог</a>
+      <a href="delivery.html">Доставка</a>
+      <a href="returns.html">Возврат и обмен</a>
+      <a href="about.html">О нас</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+    <a href="cart.html" class="h-cart" title="Корзина">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="h-cart-badge">0</span>
+      </a>
+  </div>
+</header>
+
+<div class="bc-bar" style="margin-top:72px">
+  <div class="container">
+    <nav class="breadcrumbs" id="breadcrumbs" aria-label="breadcrumb">
+      <a href="index.html">Главная</a>
+      <span class="bc-sep">›</span>
+      <a href="catalog.html">Каталог</a>
+      <span class="bc-sep">›</span>
+      <span class="bc-cur" id="bc-product">Скатерть</span>
+    </nav>
+  </div>
+</div>
+
+<main>
+<div class="container">
+
+  <!-- Product layout -->
+  <section class="product-section">
+    <div class="product-layout">
+
+      <!-- Gallery -->
+      <div class="product-gallery">
+        <div class="product-main-img" id="main-img-wrap">
+          <img id="main-img" src="img/products/1.jpg" alt="Скатерть IMMAAH">
+        </div>
+        <div class="product-thumbs" id="thumbs"></div>
+      </div>
+
+      <!-- Info -->
+      <div class="product-info">
+        <p class="product-article" id="product-article">SK-1</p>
+        <h1 class="product-title" id="product-title">Скатерть тканевая с кружевом</h1>
+        <p style="font-size:.8rem;color:var(--text-low);margin-bottom:4px" id="product-pattern">Жаккард • 100% полиэстер</p>
+
+        <div class="product-price-main">
+          <em>от</em>
+          <strong id="product-price">700</strong>
+          <sup> ₽/шт</sup>
+        </div>
+
+        <!-- Color -->
+        <p class="product-option-label">Цвет: <span id="selected-color-name" style="color:var(--text-mid);text-transform:none;letter-spacing:0;font-weight:400">—</span></p>
+        <div class="color-selector" id="color-selector"></div>
+
+        <!-- Size -->
+        <p class="product-option-label">Размер: <span id="selected-size-name" style="color:var(--text-mid);text-transform:none;letter-spacing:0;font-weight:400">—</span></p>
+        <div class="size-selector" id="size-selector"></div>
+
+        <!-- Quantity -->
+        <p class="product-option-label">Количество</p>
+        <div class="qty-row">
+          <div class="qty-field">
+            <button onclick="changeQty(-1)">−</button>
+            <input type="number" id="qty-input" value="1" min="1">
+            <button onclick="changeQty(1)">+</button>
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="product-actions">
+          <button class="btn-buy" id="add-to-cart-btn">В корзину</button>
+          <a href="contacts.html" class="btn btn-ghost" style="padding:14px 20px;font-size:.68rem">Оптовый запрос</a>
+        </div>
+
+        <!-- Delivery -->
+        <div class="product-delivery">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="1"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          <span>Доставка по всей России — СДЭК, Почта, Яндекс. Самовывоз бесплатно.</span>
+        </div>
+
+        <!-- Badges -->
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <span style="font-size:.6rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--b-dim);padding:4px 10px;color:var(--text-low)">100% полиэстер</span>
+          <span style="font-size:.6rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--b-dim);padding:4px 10px;color:var(--text-low)">Жаккард</span>
+          <span style="font-size:.6rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--b-dim);padding:4px 10px;color:var(--text-low)">Честный знак</span>
+          <span style="font-size:.6rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--b-dim);padding:4px 10px;color:var(--gold-2)">В наличии</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Tabs -->
+    <div class="product-tabs">
+      <div class="tab-bar">
+        <button class="tab-btn active" data-tab="desc">Описание</button>
+        <button class="tab-btn" data-tab="specs">Характеристики</button>
+        <button class="tab-btn" data-tab="wholesale">Оптовые цены</button>
+        <button class="tab-btn" data-tab="care">Уход</button>
+      </div>
+
+      <div class="tab-panel active" id="tab-desc">
+        <p style="font-size:.88rem;color:var(--text-mid);line-height:1.95;max-width:800px" id="tab-desc-text">
+          Жаккардовые скатерти IMMAAH — это оптовые поставки премиального столового белья. Жаккардовое плетение создаёт рельефный узор прямо в структуре ткани — без печати, без выцветания, без потери рисунка со временем. Атласная поверхность придаёт мягкий благородный блеск, кружево по краю создаёт элегантный завершающий акцент.
+        </p>
+        <ul style="margin-top:16px;display:flex;flex-direction:column;gap:8px">
+          <li style="font-size:.82rem;color:var(--text-mid);display:flex;gap:10px;align-items:flex-start"><span style="color:var(--gold-2);margin-top:3px">✦</span>Рельефный жаккардовый узор — не выцветает, не теряет рисунка</li>
+          <li style="font-size:.82rem;color:var(--text-mid);display:flex;gap:10px;align-items:flex-start"><span style="color:var(--gold-2);margin-top:3px">✦</span>Атласная поверхность — мягкий благородный блеск</li>
+          <li style="font-size:.82rem;color:var(--text-mid);display:flex;gap:10px;align-items:flex-start"><span style="color:var(--gold-2);margin-top:3px">✦</span>Кружево по всему краю — роскошный завершающий элемент</li>
+          <li style="font-size:.82rem;color:var(--text-mid);display:flex;gap:10px;align-items:flex-start"><span style="color:var(--gold-2);margin-top:3px">✦</span>Размер стабилен после стирки — не садится</li>
+        </ul>
+      </div>
+
+      <div class="tab-panel" id="tab-specs">
+        <table class="spec-table" style="max-width:600px">
+          <tr><td>Состав</td><td>100% полиэстер</td></tr>
+          <tr><td>Плетение</td><td>Жаккард (рельефный узор в структуре нити)</td></tr>
+          <tr><td>Поверхность</td><td>Атласная — мягкий благородный блеск</td></tr>
+          <tr><td>Отделка края</td><td>Кружево по всему периметру</td></tr>
+          <tr><td id="spec-sizes">Размеры</td><td>120×150, 140×180, 150×220, 150×300 см</td></tr>
+          <tr><td id="spec-colors">Цвета</td><td id="spec-colors-val">—</td></tr>
+          <tr><td>Маркировка</td><td>Честный знак (ДС, ДТ)</td></tr>
+          <tr><td>Минимальный заказ</td><td>1 штука</td></tr>
+        </table>
+      </div>
+
+      <div class="tab-panel" id="tab-wholesale">
+        <p style="font-size:.82rem;color:var(--text-mid);margin-bottom:20px">Цены на данную модель в зависимости от объёма заказа:</p>
+        <div style="overflow-x:auto">
+          <table class="price-table" id="wholesale-table">
+            <thead>
+              <tr>
+                <th class="td-name">Размер</th>
+                <th>50–1 000 шт</th>
+                <th>1 001–5 000 шт</th>
+                <th>5 001–10 000 шт</th>
+              </tr>
+            </thead>
+            <tbody id="wholesale-tbody"></tbody>
+          </table>
+        </div>
+        <p style="font-size:.72rem;color:var(--text-low);margin-top:12px">Для согласования индивидуальных условий — <a href="contacts.html" style="color:var(--gold-2)">напишите нам</a></p>
+      </div>
+
+      <div class="tab-panel" id="tab-care">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:20px">
+          <div style="background:var(--bg-card);border:1px solid var(--b-dim);padding:20px;text-align:center;border-radius:2px">
+            <p style="font-size:1.6rem;margin-bottom:8px">🫧</p>
+            <p style="font-size:.8rem;font-weight:600;color:var(--text-hi);margin-bottom:4px">Стирка</p>
+            <p style="font-size:.74rem;color:var(--text-low)">Машинная стирка при 30°C, щадящий режим</p>
+          </div>
+          <div style="background:var(--bg-card);border:1px solid var(--b-dim);padding:20px;text-align:center;border-radius:2px">
+            <p style="font-size:1.6rem;margin-bottom:8px">👕</p>
+            <p style="font-size:.8rem;font-weight:600;color:var(--text-hi);margin-bottom:4px">Глажка</p>
+            <p style="font-size:.74rem;color:var(--text-low)">При средней температуре, без пара</p>
+          </div>
+          <div style="background:var(--bg-card);border:1px solid var(--b-dim);padding:20px;text-align:center;border-radius:2px">
+            <p style="font-size:1.6rem;margin-bottom:8px">🚫</p>
+            <p style="font-size:.8rem;font-weight:600;color:var(--text-hi);margin-bottom:4px">Не отбеливать</p>
+            <p style="font-size:.74rem;color:var(--text-low)">Не использовать хлорсодержащие средства</p>
+          </div>
+          <div style="background:var(--bg-card);border:1px solid var(--b-dim);padding:20px;text-align:center;border-radius:2px">
+            <p style="font-size:1.6rem;margin-bottom:8px">✅</p>
+            <p style="font-size:.8rem;font-weight:600;color:var(--text-hi);margin-bottom:4px">Химчистка</p>
+            <p style="font-size:.74rem;color:var(--text-low)">Химическая чистка разрешена</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Related products -->
+    <div style="margin-top:80px;border-top:1px solid var(--b-dim);padding-top:64px">
+      <div class="section-head" style="margin-bottom:40px">
+        <span class="label">Похожие товары</span>
+        <h2>Другие модели</h2>
+        <div class="divider"><div class="divider-diamond"></div></div>
+      </div>
+      <div class="products-grid" id="related-grid" style="grid-template-columns:repeat(3,1fr)"></div>
+    </div>
+
+  </section>
+</div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="img/logo.png" alt="IMMAAH" style="height:56px;width:auto;filter:drop-shadow(0 0 8px rgba(210,159,38,.3))">
+        <p class="footer-brand-name shimmer" style="display:none"></p>
+        <p class="footer-brand-tag">Формула идеального интерьера</p>
+        <p class="footer-brand-desc">Оптовые поставки премиальных жаккардовых скатертей.</p>
+      </div>
+      <div>
+        <p class="footer-col-title">Меню</p>
+        <ul class="footer-links">
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="delivery.html">Доставка</a></li>
+          <li><a href="returns.html">Возврат и обмен</a>
+      <a href="about.html">О нас</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Покупателям</p>
+        <ul class="footer-links">
+          <li><a href="returns.html">Возврат и обмен</a></li>
+          <li><a href="offer.html">Договор оферты</a></li>
+          <li><a href="privacy.html">Политика конфиденциальности</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Контакты</p>
+        <div class="contact-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>immaah.home@mail.ru</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 IMMAAH. ИП Цицкиева Х.М., ОГРНИП 322060000000636</span>
+      <div style="display:flex;gap:20px">
+        <a href="offer.html">Оферта</a>
+        <a href="privacy.html">Политика</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+const PRODUCTS = {
+  'SK-1': { name:'Скатерть тканевая с кружевом', pattern:'Вензель', img:'img/products/1.jpg', colors:[{name:'Белый',hex:'#F5F0E8'}], sizes:{'120×150':700,'140×180':900,'150×220':1050,'150×300':1300}, wh2:{} },
+  'SK-2': { name:'Скатерть тканевая с кружевом', pattern:'Вензель', img:'img/products/3.jpg', colors:[{name:'Ваниль',hex:'#F0E4C0'},{name:'Сливочный',hex:'#EDE0B5'}], sizes:{'120×150':700,'140×180':900,'150×220':1050,'150×300':1300}, wh2:{} },
+  'SK-3': { name:'Скатерть тканевая с кружевом', pattern:'Вензель', img:'img/products/2.jpg', colors:[{name:'Бежевый',hex:'#E8D0B8'},{name:'Бежево-розовый',hex:'#D4A8A0'}], sizes:{'120×150':700,'140×180':900,'150×220':1050,'150×300':1300}, wh2:{} },
+  'SK-4': { name:'Скатерть тканевая с кружевом', pattern:'Вензель', img:'img/products/6.jpg', colors:[{name:'Капучино',hex:'#C0956A'}], sizes:{'120×150':700,'140×180':900,'150×220':1050,'150×300':1300}, wh2:{} },
+  'SK-5': { name:'Скатерть тканевая с кружевом', pattern:'Цветочек', img:'img/products/4.jpg', colors:[{name:'Белый',hex:'#F5F0E8'}], sizes:{'120×150':700,'140×180':900,'150×220':1050,'150×300':1300}, wh2:{} },
+  'SK-6': { name:'Скатерть тканевая с кружевом', pattern:'Цветочек', img:'img/products/5.jpg', colors:[{name:'Ваниль',hex:'#F0E4C0'},{name:'Сливочный',hex:'#EDE0B5'}], sizes:{'120×150':700,'140×180':900,'150×220':1050,'150×300':1300}, wh2:{} },
+  'SK-7': { name:'Скатерть тканевая с кружевом', pattern:'Цветочек', img:'img/products/7.jpg', colors:[{name:'Бежевый',hex:'#E8D0B8'},{name:'Бежево-розовый',hex:'#D4A8A0'}], sizes:{'120×150':700,'140×180':900,'150×220':1050,'150×300':1300}, wh2:{} },
+  'SK-8': { name:'Скатерть тканевая с кружевом', pattern:'Цветочек', img:'img/products/8.jpg', colors:[{name:'Капучино',hex:'#C0956A'}], sizes:{'120×150':700,'140×180':900,'150×220':1050,'150×300':1300}, wh2:{} },
+  'SK-9': { name:'Скатерть тканевая с кружевом', pattern:'Жаккард', img:'img/products/1.jpg', colors:[{name:'Белый',hex:'#F5F0E8'}], sizes:{'110×150':700,'130×180':900,'150×220':1050,'150×310':1300}, wh2:{} },
+  'SK-10':{ name:'Скатерть тканевая с тёмным кружевом', pattern:'Жаккард', img:'img/products/8.jpg', colors:[{name:'Белый',hex:'#F0EDE5'}], sizes:{'110×150':700,'130×180':900,'150×220':1050,'150×310':1300}, wh2:{} },
+  'SK-11':{ name:'Скатерть тканевая с кружевом', pattern:'Жаккард', img:'img/products/3.jpg', colors:[{name:'Бежевый',hex:'#E8D0B8'}], sizes:{'110×150':700,'130×180':900,'150×220':1050,'150×310':1300}, wh2:{} }
+};
+
+// Wholesale discounts: tier2 = -50, tier3 = -100
+Object.keys(PRODUCTS).forEach(k => {
+  const p = PRODUCTS[k];
+  Object.keys(p.sizes).forEach(s => {
+    p.wh2[s] = p.sizes[s] - 50;
+  });
+});
+
+const params = new URLSearchParams(location.search);
+const id = params.get('id') || 'SK-1';
+const product = PRODUCTS[id] || PRODUCTS['SK-1'];
+let selectedSize = Object.keys(product.sizes)[0];
+let selectedColor = product.colors[0];
+
+function fmt(n) { return n.toLocaleString('ru'); }
+
+function init() {
+  document.title = `${product.name} ${id} — IMMAAH`;
+  document.getElementById('page-title').textContent = `${product.name} ${id} — IMMAAH`;
+  document.getElementById('product-article').textContent = id;
+  document.getElementById('product-title').textContent = product.name;
+  document.getElementById('product-pattern').textContent = `Жаккард • 100% полиэстер • Узор: ${product.pattern}`;
+  document.getElementById('bc-product').textContent = `${product.name} (${id})`;
+  document.getElementById('main-img').src = product.img;
+
+  // Thumbs (show same image, in real WC there would be multiple)
+  const thumbs = document.getElementById('thumbs');
+  thumbs.innerHTML = [product.img, product.img, product.img, product.img].map((src,i) =>
+    `<div class="product-thumb ${i===0?'active':''}" data-img="${src}"><img src="${src}" loading="lazy"></div>`
+  ).join('');
+  thumbs.querySelectorAll('.product-thumb').forEach(t => {
+    t.addEventListener('click', () => {
+      thumbs.querySelectorAll('.product-thumb').forEach(x=>x.classList.remove('active'));
+      t.classList.add('active');
+      document.getElementById('main-img').src = t.dataset.img;
+    });
+  });
+
+  // Colors
+  const cs = document.getElementById('color-selector');
+  cs.innerHTML = product.colors.map((c,i) => `
+    <div class="color-btn ${i===0?'active':''}" data-color="${c.name}" style="background:${c.hex}" title="${c.name}">
+      <span class="color-tip">${c.name}</span>
+    </div>`).join('');
+  selectedColor = product.colors[0];
+  document.getElementById('selected-color-name').textContent = selectedColor.name;
+  cs.querySelectorAll('.color-btn').forEach(b => {
+    b.addEventListener('click', () => {
+      cs.querySelectorAll('.color-btn').forEach(x=>x.classList.remove('active'));
+      b.classList.add('active');
+      selectedColor = product.colors.find(c=>c.name===b.dataset.color);
+      document.getElementById('selected-color-name').textContent = selectedColor.name;
+    });
+  });
+
+  // Sizes
+  const ss = document.getElementById('size-selector');
+  ss.innerHTML = Object.keys(product.sizes).map((s,i) => `
+    <button class="size-btn ${i===0?'active':''}" data-size="${s}" data-price="${product.sizes[s]}">${s} см</button>`).join('');
+  document.getElementById('selected-size-name').textContent = selectedSize;
+  updatePrice();
+  ss.querySelectorAll('.size-btn').forEach(b => {
+    b.addEventListener('click', () => {
+      ss.querySelectorAll('.size-btn').forEach(x=>x.classList.remove('active'));
+      b.classList.add('active');
+      selectedSize = b.dataset.size;
+      document.getElementById('selected-size-name').textContent = selectedSize;
+      updatePrice();
+    });
+  });
+
+  // Wholesale table
+  const tbody = document.getElementById('wholesale-tbody');
+  tbody.innerHTML = Object.keys(product.sizes).map(s => `
+    <tr>
+      <td class="td-name">${s} см</td>
+      <td>${fmt(product.sizes[s])} ₽/шт</td>
+      <td>${fmt(product.sizes[s]-50)} ₽/шт</td>
+      <td>${fmt(product.sizes[s]-100)} ₽/шт</td>
+    </tr>`).join('');
+
+  // Specs
+  document.getElementById('spec-colors-val').textContent = product.colors.map(c=>c.name).join(', ');
+
+  // Related
+  const others = Object.keys(PRODUCTS).filter(k=>k!==id).slice(0,3);
+  const rg = document.getElementById('related-grid');
+  rg.innerHTML = others.map(k => {
+    const p = PRODUCTS[k];
+    return `<div class="card" onclick="location.href='product.html?id=${k}'" style="cursor:pointer">
+      <div class="card-img"><img src="${p.img}" loading="lazy"><span class="card-label">${k}</span></div>
+      <div class="card-info">
+        <p class="card-name">${p.name}</p>
+        <p class="card-sub">Жаккард • Узор: ${p.pattern}</p>
+        <div class="card-footer">
+          <div class="card-price"><em>от</em><strong>${fmt(Object.values(p.sizes)[0]-100)}</strong><sup> ₽/шт</sup></div>
+          <a href="product.html?id=${k}" class="card-cta">Подробнее</a>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function updatePrice() {
+  document.getElementById('product-price').textContent = fmt(product.sizes[selectedSize] - 100);
+}
+
+function changeQty(delta) {
+  const inp = document.getElementById('qty-input');
+  inp.value = Math.max(1, (+inp.value || 50) + delta);
+}
+
+// Tabs
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+  });
+});
+
+// Add to cart
+document.getElementById('add-to-cart-btn').addEventListener('click', function() {
+  const name = `${product.name} (${id}, ${selectedColor.name}, ${selectedSize} см)`;
+  addToCart(id + '-' + selectedSize + '-' + selectedColor.name, name, product.sizes[selectedSize] - 100, product.img);
+  triggerCartAnimation(this);
+});
+
+init();
+</script>
+</body>
+</html>
+

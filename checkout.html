@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Оформление заказа — IMMAAH</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header id="header">
+  <div class="header-inner">
+    <a href="index.html" class="h-logo"><img src="img/logo.png" alt="IMMAAH"></a>
+    <nav class="h-nav">
+      <a href="catalog.html">Каталог</a>
+      <a href="delivery.html">Доставка</a>
+      <a href="returns.html">Возврат и обмен</a>
+      <a href="about.html">О нас</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+    <a href="cart.html" class="h-cart" title="Корзина">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="h-cart-badge">0</span>
+      </a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="ph-content">
+    <span class="label">Шаг 2 из 2</span>
+    <h1 class="ph-title shimmer">Оформление заказа</h1>
+    <div class="divider"><div class="divider-diamond"></div></div>
+  </div>
+</section>
+
+<main>
+<section style="padding:80px 0">
+  <div class="container">
+    <div class="checkout-layout fade">
+
+      <!-- Left: Form -->
+      <div>
+
+        <div class="checkout-block">
+          <p class="checkout-block-title">Личные данные</p>
+          <div class="form-stack">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+              <input type="text" placeholder="Имя *" required>
+              <input type="text" placeholder="Фамилия *" required>
+            </div>
+            <input type="tel" placeholder="Телефон *" required>
+            <input type="email" placeholder="Email *" required>
+            <input type="text" placeholder="Компания / ИП (для юрлиц)">
+          </div>
+        </div>
+
+        <div class="checkout-block">
+          <p class="checkout-block-title">Способ доставки</p>
+          <div class="radio-group" id="delivery-group">
+            <label class="radio-option selected">
+              <input type="radio" name="delivery" value="cdek" checked>
+              <div>
+                <p class="radio-label">СДЭК</p>
+                <p class="radio-sub">Доставка в ПВЗ или курьером — 2–7 рабочих дней</p>
+              </div>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="delivery" value="post">
+              <div>
+                <p class="radio-label">Почта России</p>
+                <p class="radio-sub">Доставка во все регионы — 5–14 дней</p>
+              </div>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="delivery" value="yandex">
+              <div>
+                <p class="radio-label">Яндекс Доставка</p>
+                <p class="radio-sub">Курьер до двери в крупных городах — 1–2 дня</p>
+              </div>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="delivery" value="pickup">
+              <div>
+                <p class="radio-label">Самовывоз</p>
+                <p class="radio-sub">Бесплатно. с. Армхи, Республика Ингушетия</p>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="checkout-block" id="address-block">
+          <p class="checkout-block-title">Адрес доставки</p>
+          <div class="form-stack">
+            <input type="text" placeholder="Город *" required>
+            <input type="text" placeholder="Улица, дом, квартира *" required>
+            <input type="text" placeholder="Индекс">
+          </div>
+        </div>
+
+        <div class="checkout-block">
+          <p class="checkout-block-title">Способ оплаты</p>
+          <div class="radio-group">
+            <label class="radio-option selected">
+              <input type="radio" name="payment" value="online" checked>
+              <div>
+                <p class="radio-label">Онлайн-оплата</p>
+                <p class="radio-sub">Карты Visa, Mastercard, МИР, СБП, ЮMoney — через ЮKassa</p>
+              </div>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="payment" value="invoice">
+              <div>
+                <p class="radio-label">Счёт для юридических лиц</p>
+                <p class="radio-sub">Безналичный расчёт, закрывающие документы</p>
+              </div>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="payment" value="cash">
+              <div>
+                <p class="radio-label">Наличные при самовывозе</p>
+                <p class="radio-sub">Только при выборе самовывоза</p>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="checkout-block">
+          <p class="checkout-block-title">Комментарий к заказу</p>
+          <div class="form-stack">
+            <textarea placeholder="Укажите особые пожелания, уточнение по размерам или моделям..." rows="3"></textarea>
+          </div>
+        </div>
+
+        <button class="btn btn-gold" style="width:100%;justify-content:center;font-size:.78rem" onclick="window.location.href='thankyou.html'">
+          Подтвердить заказ
+        </button>
+        <p style="font-size:.65rem;color:var(--text-low);text-align:center;margin-top:12px">
+          Оформляя заказ, вы принимаете <a href="offer.html" style="color:var(--gold-2)">договор оферты</a> и <a href="privacy.html" style="color:var(--gold-2)">политику конфиденциальности</a>
+        </p>
+      </div>
+
+      <!-- Right: Summary -->
+      <div class="order-summary-sticky fade" data-delay="2">
+        <p class="cart-summary-title">Ваш заказ</p>
+        <div id="checkout-items">
+          <!-- JS -->
+          <p style="font-size:.8rem;color:var(--text-low);padding:16px 0">Корзина пуста</p>
+        </div>
+        <div style="margin-top:16px">
+          <div class="summary-row"><span>Итого</span><span id="checkout-total" style="color:var(--gold-3);font-weight:700">0 ₽</span></div>
+          <div class="summary-row"><span>Доставка</span><span style="color:var(--text-low)">при подтверждении</span></div>
+        </div>
+        <a href="cart.html" style="display:block;text-align:center;font-size:.7rem;color:var(--text-low);margin-top:16px;transition:color .2s" onmouseover="this.style.color='var(--gold-4)'" onmouseout="this.style.color='var(--text-low)'">← Вернуться в корзину</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="img/logo.png" alt="IMMAAH" style="height:56px;width:auto;filter:drop-shadow(0 0 8px rgba(210,159,38,.3))">
+        <p class="footer-brand-name shimmer" style="display:none"></p>
+        <p class="footer-brand-tag">Формула идеального интерьера</p>
+        <p class="footer-brand-desc">Оптовые поставки премиальных жаккардовых скатертей. Работаем с ИП и юрлицами по всей России.</p>
+      </div>
+      <div>
+        <p class="footer-col-title">Меню</p>
+        <ul class="footer-links">
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="delivery.html">Доставка</a></li>
+          <li><a href="returns.html">Возврат и обмен</a></li>
+          <li><a href="about.html">О нас</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Покупателям</p>
+        <ul class="footer-links">
+          <li><a href="catalog.html">Оптовые цены</a></li>
+          <li><a href="returns.html">Возврат и обмен</a></li>
+          <li><a href="offer.html">Договор оферты</a></li>
+          <li><a href="privacy.html">Политика конфиденциальности</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Контакты</p>
+        <div class="contact-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>immaah.home@mail.ru</span>
+        </div>
+        <div class="contact-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.4 8.4 0 01-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.4 8.4 0 013.8-.9h.5a8.5 8.5 0 018 8v.5z"/></svg>
+          <span>Telegram / WhatsApp</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 IMMAAH. Все права защищены. ИП Цицкиева Х.М., ОГРНИП 322060000000636</span>
+      <div style="display:flex;gap:20px">
+        <a href="offer.html">Оферта</a>
+        <a href="privacy.html">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+(function() {
+  const CART_KEY = 'immaah_cart';
+  function getCart() { try { return JSON.parse(localStorage.getItem(CART_KEY)) || []; } catch { return []; } }
+  function fmt(n) { return n.toLocaleString('ru') + ' ₽'; }
+
+  const cart = getCart();
+  const itemsEl = document.getElementById('checkout-items');
+  const totalEl = document.getElementById('checkout-total');
+
+  if (cart.length) {
+    itemsEl.innerHTML = cart.map(i => `
+      <div class="order-item-row">
+        <span class="order-item-name">${i.name} × ${i.qty}</span>
+        <span class="order-item-price">${fmt(i.price * i.qty)}</span>
+      </div>
+    `).join('');
+    totalEl.textContent = fmt(cart.reduce((s,i) => s + i.price * i.qty, 0));
+  }
+
+  // Radio styling
+  document.querySelectorAll('.radio-option').forEach(opt => {
+    opt.addEventListener('click', () => {
+      const grp = opt.closest('.radio-group');
+      grp.querySelectorAll('.radio-option').forEach(o => o.classList.remove('selected'));
+      opt.classList.add('selected');
+      opt.querySelector('input').checked = true;
+    });
+  });
+
+  // Hide address if pickup
+  document.querySelectorAll('[name="delivery"]').forEach(r => {
+    r.addEventListener('change', () => {
+      const ab = document.getElementById('address-block');
+      ab.style.display = r.value === 'pickup' ? 'none' : '';
+    });
+  });
+})();
+</script>
+</body>
+</html>
+
+

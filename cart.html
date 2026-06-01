@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Корзина — IMMAAH</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header id="header">
+  <div class="header-inner">
+    <a href="index.html" class="h-logo"><img src="img/logo.png" alt="IMMAAH"></a>
+    <nav class="h-nav">
+      <a href="catalog.html">Каталог</a>
+      <a href="delivery.html">Доставка</a>
+      <a href="returns.html">Возврат и обмен</a>
+      <a href="about.html">О нас</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+    <a href="cart.html" class="h-cart active" title="Корзина">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="h-cart-badge">0</span>
+      </a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="ph-content">
+    <span class="label">Ваш выбор</span>
+    <h1 class="ph-title shimmer">Корзина</h1>
+    <div class="divider"><div class="divider-diamond"></div></div>
+  </div>
+</section>
+
+<main>
+<section class="cart-section">
+  <div class="container">
+    <div class="cart-layout" id="cart-layout">
+      <!-- Заполняется JS -->
+      <div class="cart-empty" id="cart-empty" style="display:none">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        <h2 style="font-family:'Cormorant Garamond',serif;color:var(--text-mid);margin-bottom:10px">Корзина пуста</h2>
+        <p>Добавьте товары из каталога</p>
+        <a href="catalog.html" class="btn btn-gold" style="margin-top:8px">Перейти в каталог</a>
+      </div>
+
+      <div id="cart-items-wrap">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px">
+          <p style="font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-2)">Товары в корзине</p>
+          <button id="clear-cart" style="background:none;border:none;font-size:.7rem;color:var(--text-low);cursor:pointer;transition:color .2s;font-family:'Raleway',sans-serif" onmouseover="this.style.color='#c04040'" onmouseout="this.style.color='var(--text-low)'">Очистить корзину</button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+      </div>
+
+      <div class="cart-summary fade" id="cart-summary">
+        <p class="cart-summary-title">Итого</p>
+        <div class="summary-row"><span>Количество товаров</span><span id="sum-count">0 шт</span></div>
+        <div class="summary-row"><span>Стоимость</span><span id="sum-price">0 ₽</span></div>
+        <div class="summary-row"><span>Доставка</span><span style="color:var(--text-low)">рассчитывается</span></div>
+        <div class="summary-row total"><span>К оплате</span><span id="sum-total">0 ₽</span></div>
+        <a href="checkout.html" class="btn btn-gold" style="width:100%;justify-content:center;margin-top:20px;display:flex">
+          Оформить заказ
+        </a>
+        <a href="catalog.html" class="btn btn-ghost" style="width:100%;justify-content:center;margin-top:10px;display:flex;font-size:.65rem">
+          Продолжить покупки
+        </a>
+        <p style="font-size:.65rem;color:var(--text-low);text-align:center;margin-top:14px;line-height:1.7">
+          Оформляя заказ, вы соглашаетесь с <a href="offer.html" style="color:var(--gold-2)">договором оферты</a> и <a href="privacy.html" style="color:var(--gold-2)">политикой конфиденциальности</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="img/logo.png" alt="IMMAAH" style="height:56px;width:auto;filter:drop-shadow(0 0 8px rgba(210,159,38,.3))">
+        <p class="footer-brand-name shimmer" style="display:none"></p>
+        <p class="footer-brand-tag">Формула идеального интерьера</p>
+        <p class="footer-brand-desc">Оптовые поставки премиальных жаккардовых скатертей.</p>
+      </div>
+      <div>
+        <p class="footer-col-title">Меню</p>
+        <ul class="footer-links">
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="delivery.html">Доставка</a></li>
+          <li><a href="returns.html">Возврат и обмен</a>
+      <a href="about.html">О нас</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Покупателям</p>
+        <ul class="footer-links">
+          <li><a href="catalog.html">Оптовые цены</a></li>
+          <li><a href="offer.html">Договор оферты</a></li>
+          <li><a href="privacy.html">Политика конфиденциальности</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Контакты</p>
+        <div class="contact-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>immaah.home@mail.ru</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 IMMAAH. Все права защищены.</span>
+      <div style="display:flex;gap:20px">
+        <a href="offer.html">Оферта</a>
+        <a href="privacy.html">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+(function() {
+  const CART_KEY = 'immaah_cart';
+  function getCart() { try { return JSON.parse(localStorage.getItem(CART_KEY)) || []; } catch { return []; } }
+  function saveCart(c) { localStorage.setItem(CART_KEY, JSON.stringify(c)); }
+
+  function fmt(n) { return n.toLocaleString('ru') + ' ₽'; }
+
+  function render() {
+    const cart = getCart();
+    const wrap = document.getElementById('cart-items-wrap');
+    const empty = document.getElementById('cart-empty');
+    const summary = document.getElementById('cart-summary');
+    const itemsEl = document.getElementById('cart-items');
+
+    if (!cart.length) {
+      wrap.style.display = 'none';
+      summary.style.display = 'none';
+      empty.style.display = '';
+      return;
+    }
+
+    wrap.style.display = '';
+    summary.style.display = '';
+    empty.style.display = 'none';
+
+    itemsEl.innerHTML = cart.map((item, idx) => `
+      <div class="cart-item" data-idx="${idx}">
+        <img class="cart-item-img" src="${item.img || 'img/products/1.jpg'}" alt="${item.name}">
+        <div>
+          <p class="cart-item-name">${item.name}</p>
+          <p class="cart-item-sub">${item.id}</p>
+          <div class="qty-control">
+            <button class="qty-btn" data-action="minus" data-idx="${idx}">−</button>
+            <span class="qty-num">${item.qty}</span>
+            <button class="qty-btn" data-action="plus" data-idx="${idx}">+</button>
+          </div>
+          <button class="cart-item-remove" data-idx="${idx}">Удалить</button>
+        </div>
+        <div style="text-align:right">
+          <p class="cart-item-price">${fmt(item.price * item.qty)}</p>
+          <p style="font-size:.68rem;color:var(--text-low);margin-top:4px">${fmt(item.price)} / шт</p>
+        </div>
+      </div>
+    `).join('');
+
+    const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
+    const count = cart.reduce((s, i) => s + i.qty, 0);
+    document.getElementById('sum-count').textContent = count + ' шт';
+    document.getElementById('sum-price').textContent = fmt(total);
+    document.getElementById('sum-total').textContent = fmt(total);
+  }
+
+  document.addEventListener('click', e => {
+    const btn = e.target.closest('[data-action]');
+    const rem = e.target.closest('.cart-item-remove');
+    const clr = e.target.closest('#clear-cart');
+
+    if (btn) {
+      const idx = +btn.dataset.idx;
+      const cart = getCart();
+      if (btn.dataset.action === 'plus') cart[idx].qty++;
+      else { cart[idx].qty--; if (cart[idx].qty <= 0) cart.splice(idx, 1); }
+      saveCart(cart); render(); updateCartBadge();
+    }
+    if (rem) {
+      const idx = +rem.dataset.idx;
+      const cart = getCart();
+      cart.splice(idx, 1);
+      saveCart(cart); render(); updateCartBadge();
+    }
+    if (clr) { saveCart([]); render(); updateCartBadge(); }
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>
+

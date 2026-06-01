@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
@@ -25,18 +25,22 @@
 
     <!-- Nav -->
     <nav class="h-nav">
-      <a href="#catalog">Каталог</a>
-      <a href="#delivery">Доставка</a>
-      <a href="#about">О нас</a>
-      <a href="#contacts">Контакты</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="delivery.html">Доставка</a>
+      <a href="returns.html">Возврат и обмен</a>
+      <a href="about.html">О нас</a>
+      <a href="contacts.html">Контакты</a>
     </nav>
 
-    <!-- CTA -->
-    <div class="header-cta-wrap">
-      <a href="#catalog" class="btn btn-gold" style="padding:10px 24px;font-size:.65rem;">
-        Оптовый заказ
+    <!-- Cart + CTA -->
+    <a href="cart.html" class="h-cart" title="Корзина">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        <span class="h-cart-badge">0</span>
       </a>
-    </div>
 
   </div>
 </header>
@@ -80,7 +84,7 @@
 
     <!-- Ornate frame + brand name -->
     <div class="hero-ornament">
-      <img src="img/hero-bg-2-no-text-v2.png" class="hero-ornament-img" alt="">
+      <img src="img/new-hero-bg-2-png.png" class="hero-ornament-img" alt="">
       <h1 class="hero-brand shimmer">IMMAAH</h1>
     </div>
 
@@ -169,9 +173,8 @@
     </div>
 
     <div class="products-grid">
-
       <!-- SK-1 -->
-      <div class="card fade" data-delay="1">
+      <div class="card fade" data-id="SK-1" data-delay="1">
         <div class="card-img">
           <img src="img/products/1.jpg" alt="Скатерть белая вензель SK-1" loading="lazy">
           <span class="card-label">SK-1</span>
@@ -184,16 +187,14 @@
             <span class="swatch" style="background:#F5F0E8" title="Белый"></span>
           </div>
           <div class="card-footer">
-            <div class="card-price">
-              <em>от</em><strong>600</strong><sup> ₽/шт</sup>
-            </div>
-            <a href="#contacts" class="card-cta">Подробнее</a>
+            <div class="card-price"><em>от</em><strong>600</strong><sup> ₽/шт</sup></div>
+            <button class="btn-buy">В корзину</button>
           </div>
         </div>
       </div>
 
       <!-- SK-2 -->
-      <div class="card fade" data-delay="2">
+      <div class="card fade" data-id="SK-2" data-delay="2">
         <div class="card-img">
           <img src="img/products/3.jpg" alt="Скатерть ваниль вензель SK-2" loading="lazy">
           <span class="card-label">SK-2</span>
@@ -207,16 +208,14 @@
             <span class="swatch" style="background:#EDE0B5" title="Сливочный"></span>
           </div>
           <div class="card-footer">
-            <div class="card-price">
-              <em>от</em><strong>600</strong><sup> ₽/шт</sup>
-            </div>
-            <a href="#contacts" class="card-cta">Подробнее</a>
+            <div class="card-price"><em>от</em><strong>600</strong><sup> ₽/шт</sup></div>
+            <button class="btn-buy">В корзину</button>
           </div>
         </div>
       </div>
 
       <!-- SK-3 -->
-      <div class="card fade" data-delay="3">
+      <div class="card fade" data-id="SK-3" data-delay="3">
         <div class="card-img">
           <img src="img/products/2.jpg" alt="Скатерть бежево-розовая вензель SK-3" loading="lazy">
           <span class="card-label">SK-3</span>
@@ -230,16 +229,14 @@
             <span class="swatch" style="background:#D4A8A0" title="Бежево-розовый"></span>
           </div>
           <div class="card-footer">
-            <div class="card-price">
-              <em>от</em><strong>600</strong><sup> ₽/шт</sup>
-            </div>
-            <a href="#contacts" class="card-cta">Подробнее</a>
+            <div class="card-price"><em>от</em><strong>600</strong><sup> ₽/шт</sup></div>
+            <button class="btn-buy">В корзину</button>
           </div>
         </div>
       </div>
 
       <!-- SK-4 -->
-      <div class="card fade" data-delay="1">
+      <div class="card fade" data-id="SK-4" data-delay="1">
         <div class="card-img">
           <img src="img/products/6.jpg" alt="Скатерть капучино вензель SK-4" loading="lazy">
           <span class="card-label">SK-4</span>
@@ -252,16 +249,14 @@
             <span class="swatch" style="background:#C0956A" title="Капучино"></span>
           </div>
           <div class="card-footer">
-            <div class="card-price">
-              <em>от</em><strong>600</strong><sup> ₽/шт</sup>
-            </div>
-            <a href="#contacts" class="card-cta">Подробнее</a>
+            <div class="card-price"><em>от</em><strong>600</strong><sup> ₽/шт</sup></div>
+            <button class="btn-buy">В корзину</button>
           </div>
         </div>
       </div>
 
       <!-- SK-5 -->
-      <div class="card fade" data-delay="2">
+      <div class="card fade" data-id="SK-5" data-delay="2">
         <div class="card-img">
           <img src="img/products/4.jpg" alt="Скатерть белая цветочек SK-5" loading="lazy">
           <span class="card-label">SK-5</span>
@@ -274,16 +269,14 @@
             <span class="swatch" style="background:#F5F0E8" title="Белый"></span>
           </div>
           <div class="card-footer">
-            <div class="card-price">
-              <em>от</em><strong>600</strong><sup> ₽/шт</sup>
-            </div>
-            <a href="#contacts" class="card-cta">Подробнее</a>
+            <div class="card-price"><em>от</em><strong>600</strong><sup> ₽/шт</sup></div>
+            <button class="btn-buy">В корзину</button>
           </div>
         </div>
       </div>
 
       <!-- SK-6 -->
-      <div class="card fade" data-delay="3">
+      <div class="card fade" data-id="SK-6" data-delay="3">
         <div class="card-img">
           <img src="img/products/5.jpg" alt="Скатерть кремовая цветочек SK-6" loading="lazy">
           <span class="card-label">SK-6</span>
@@ -297,10 +290,8 @@
             <span class="swatch" style="background:#EDE0B5" title="Сливочный"></span>
           </div>
           <div class="card-footer">
-            <div class="card-price">
-              <em>от</em><strong>600</strong><sup> ₽/шт</sup>
-            </div>
-            <a href="#contacts" class="card-cta">Подробнее</a>
+            <div class="card-price"><em>от</em><strong>600</strong><sup> ₽/шт</sup></div>
+            <button class="btn-buy">В корзину</button>
           </div>
         </div>
       </div>
@@ -308,7 +299,7 @@
     </div><!-- /products-grid -->
 
     <div class="catalog-more fade">
-      <a href="#contacts" class="btn btn-ghost">Смотреть все 11 товаров</a>
+      <a href="catalog.html" class="btn btn-ghost">Смотреть все 11 товаров</a>
     </div>
 
   </div>
@@ -638,5 +629,20 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script>
+// Card click → product page (but not if clicking the buy button)
+document.querySelectorAll('.card[data-id]').forEach(card => {
+  card.style.cursor = 'pointer';
+  card.addEventListener('click', e => {
+    if (e.target.closest('.btn-buy')) return;
+    location.href = 'product.html?id=' + card.dataset.id;
+  });
+});
+</script>
 </body>
 </html>
+
+
+
+
+

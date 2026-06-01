@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Страница не найдена — IMMAAH</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .page-404-content { position: relative; z-index: 1; padding: 0 24px; }
+
+    /* Ornament frame */
+    .err-ornament {
+      width: min(560px, 90vw);
+      margin: 0 auto 8px;
+      opacity: .55;
+      animation: pageEnter .8s .3s var(--ease) both;
+    }
+
+    /* 404 number */
+    .num-404 {
+      animation: shimmer 4s linear infinite, glow404 3s ease-in-out infinite, pageEnter .6s var(--ease) both;
+    }
+
+    /* Subtitle */
+    .err-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(1rem,2vw,1.4rem);
+      color: var(--text-mid);
+      margin: 8px 0 32px;
+      animation: pageEnter .6s .2s var(--ease) both;
+    }
+
+    /* Divider */
+    .err-divider {
+      animation: pageEnter .6s .3s var(--ease) both;
+    }
+
+    /* Buttons */
+    .err-btns {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 32px;
+      animation: pageEnter .6s .4s var(--ease) both;
+    }
+
+    /* Side decorations — same as hero */
+    .err-side {
+      position: absolute;
+      top: 15%; bottom: 15%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 2;
+      opacity: .5;
+      animation: pageEnter .8s .5s var(--ease) both;
+    }
+    .err-side-l { left: 6%; }
+    .err-side-r { right: 6%; }
+    .err-side .hero-side-line {
+      flex: 1;
+      width: 1px;
+      background: linear-gradient(to bottom, transparent, rgba(210,159,38,.4), transparent);
+    }
+    .err-side .hero-side-diamond {
+      width: 7px; height: 7px;
+      background: var(--gold-2);
+      transform: rotate(45deg);
+      flex-shrink: 0;
+      box-shadow: 0 0 8px rgba(210,159,38,.6);
+    }
+    .err-side .hero-side-diamond.hero-side-diamond--mid {
+      width: 10px; height: 10px;
+    }
+    @media (max-width: 900px) { .err-side { display: none; } }
+  </style>
+</head>
+<body>
+
+<header id="header" class="scrolled">
+  <div class="header-inner">
+    <a href="index.html" class="h-logo"><img src="img/logo.png" alt="IMMAAH"></a>
+    <nav class="h-nav">
+      <a href="catalog.html">Каталог</a>
+      <a href="delivery.html">Доставка</a>
+      <a href="returns.html">Возврат и обмен</a>
+      <a href="about.html">О нас</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:12px">
+      <a href="cart.html" class="h-cart" title="Корзина">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="h-cart-badge">0</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- Floating gold particles (created by JS) -->
+<div id="particles"></div>
+
+<section class="page-404">
+
+  <!-- Side decorations -->
+  <div class="err-side err-side-l">
+    <div class="hero-side-diamond"></div>
+    <div class="hero-side-line"></div>
+    <div class="hero-side-diamond hero-side-diamond--mid"></div>
+    <div class="hero-side-line"></div>
+    <div class="hero-side-diamond"></div>
+  </div>
+  <div class="err-side err-side-r">
+    <div class="hero-side-diamond"></div>
+    <div class="hero-side-line"></div>
+    <div class="hero-side-diamond hero-side-diamond--mid"></div>
+    <div class="hero-side-line"></div>
+    <div class="hero-side-diamond"></div>
+  </div>
+
+  <div class="page-404-content">
+
+    <!-- 404 -->
+    <p class="num-404">404</p>
+
+    <!-- Tagline -->
+    <div class="err-divider">
+      <div class="divider" style="margin:16px auto"><div class="divider-diamond"></div></div>
+    </div>
+    <p class="err-sub">Эта страница исчезла, как скатерть после праздника</p>
+
+    <p style="font-size:.82rem;color:var(--text-low);max-width:420px;margin:0 auto;line-height:1.85;animation:pageEnter .6s .35s var(--ease) both">
+      Страница не найдена или была перемещена. Воспользуйтесь навигацией или вернитесь в каталог.
+    </p>
+
+    <div class="err-btns">
+      <a href="index.html" class="btn btn-gold">На главную</a>
+      <a href="catalog.html" class="btn btn-ghost">В каталог</a>
+      <a href="contacts.html" class="btn btn-ghost">Контакты</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="img/logo.png" alt="IMMAAH" style="height:56px;width:auto;filter:drop-shadow(0 0 8px rgba(210,159,38,.3))">
+        <p class="footer-brand-name shimmer" style="display:none"></p>
+        <p class="footer-brand-tag">Формула идеального интерьера</p>
+        <p class="footer-brand-desc">Оптовые поставки премиальных жаккардовых скатертей. Работаем с ИП и юрлицами по всей России.</p>
+      </div>
+      <div>
+        <p class="footer-col-title">Меню</p>
+        <ul class="footer-links">
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="delivery.html">Доставка</a></li>
+          <li><a href="returns.html">Возврат и обмен</a></li>
+          <li><a href="about.html">О нас</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Покупателям</p>
+        <ul class="footer-links">
+          <li><a href="catalog.html">Оптовые цены</a></li>
+          <li><a href="returns.html">Возврат и обмен</a></li>
+          <li><a href="offer.html">Договор оферты</a></li>
+          <li><a href="privacy.html">Политика конфиденциальности</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Контакты</p>
+        <div class="contact-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>immaah.home@mail.ru</span>
+        </div>
+        <div class="contact-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.4 8.4 0 01-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.4 8.4 0 013.8-.9h.5a8.5 8.5 0 018 8v.5z"/></svg>
+          <span>Telegram / WhatsApp</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 IMMAAH. Все права защищены. ИП Цицкиева Х.М., ОГРНИП 322060000000636</span>
+      <div style="display:flex;gap:20px">
+        <a href="offer.html">Оферта</a>
+        <a href="privacy.html">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+// Generate floating gold particles
+(function() {
+  const container = document.getElementById('particles');
+  const section = document.querySelector('.page-404');
+  for (let i = 0; i < 22; i++) {
+    const el = document.createElement('div');
+    el.className = 'particle';
+    const size = 2 + Math.random() * 3;
+    el.style.cssText = `
+      left: ${Math.random() * 100}%;
+      bottom: ${-10 + Math.random() * 20}px;
+      width: ${size}px;
+      height: ${size}px;
+      --tx: ${(Math.random() - .5) * 120}px;
+      animation-duration: ${6 + Math.random() * 10}s;
+      animation-delay: ${Math.random() * 8}s;
+      position: fixed;
+      z-index: 0;
+    `;
+    section.appendChild(el);
+  }
+})();
+</script>
+</body>
+</html>
+
+
+
