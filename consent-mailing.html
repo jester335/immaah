@@ -1,38 +1,17 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Заказ принят — IMMAAH</title>
+  <title>Согласие на получение рекламной рассылки — IMMAAH</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <style>
-    .check-circle {
-      width: 80px; height: 80px;
-      border: 2px solid var(--gold-2);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      margin: 0 auto 24px;
-      animation: checkAppear .6s var(--ease) both;
-      box-shadow: 0 0 30px rgba(210,159,38,.25);
-    }
-    @keyframes checkAppear {
-      from { transform: scale(0); opacity: 0; }
-      to   { transform: scale(1); opacity: 1; }
-    }
-    .check-circle svg { animation: checkDraw .4s .5s var(--ease) both; }
-    @keyframes checkDraw {
-      from { stroke-dashoffset: 100; opacity: 0; }
-      to   { stroke-dashoffset: 0;   opacity: 1; }
-    }
-    .thankyou-content { animation: pageEnter .5s .2s var(--ease) both; }
-  </style>
 </head>
 <body>
 
-<header id="header" class="scrolled">
+<header id="header">
   <div class="header-inner">
     <a href="index.html" class="h-logo"><img src="img/logo.png" alt="IMMAAH"></a>
     <nav class="h-nav">
@@ -51,26 +30,75 @@
   </div>
 </header>
 
+<section class="page-hero">
+  <div class="ph-content">
+    <span class="label">Правовые документы</span>
+    <h1 class="ph-title shimmer">Согласие на получение рекламной рассылки</h1>
+    <div class="divider"><div class="divider-diamond"></div></div>
+  </div>
+</section>
+
 <main>
-<section class="thankyou-section">
-  <div class="thankyou-content">
-    <div class="check-circle">
-      <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="var(--gold-3)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="stroke-dasharray:100">
-        <polyline points="20 6 9 17 4 12"/>
-      </svg>
-    </div>
-    <p class="thankyou-num">Заказ #<span id="order-num">—</span></p>
-    <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;margin-bottom:12px">Спасибо за заказ!</h1>
-    <div class="divider" style="margin:16px auto"><div class="divider-diamond"></div></div>
-    <p style="font-size:.88rem;color:var(--text-mid);max-width:480px;margin:16px auto;line-height:1.9">
-      Мы получили ваш заказ и свяжемся с вами в течение рабочего дня для подтверждения деталей и расчёта стоимости доставки.
-    </p>
-    <p style="font-size:.78rem;color:var(--text-low);margin-bottom:36px">
-      Подтверждение отправлено на ваш email
-    </p>
-    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-      <a href="catalog.html" class="btn btn-gold">Продолжить покупки</a>
-      <a href="index.html" class="btn btn-ghost">На главную</a>
+<section class="legal-section">
+  <div class="container">
+    <div class="legal-content fade">
+      <p class="legal-updated">Дата последнего обновления: 01 января 2026 года</p>
+
+      <p>Настоящее Согласие на получение рекламной рассылки (далее — Согласие) предоставляется пользователем (далее — Субъект) в адрес ИП Цицкиева Хатчат Магомедовна (далее — Отправитель, IMMAAH), осуществляющего деятельность через сайт <strong>immaah.ru</strong>.</p>
+
+      <p>Проставляя отметку в чекбоксе «Согласен получать рекламную рассылку» при заполнении формы на сайте, Субъект выражает добровольное и информированное согласие на получение рекламных материалов в соответствии с Федеральным законом от 13.03.2006 № 38-ФЗ «О рекламе» и Федеральным законом от 27.07.2006 № 152-ФЗ «О персональных данных».</p>
+
+      <h2>1. Состав рассылки</h2>
+      <p>Субъект соглашается на получение следующих видов рассылок:</p>
+      <ul>
+        <li>Информация о новых поступлениях товаров (скатерти, плейсматы, текстиль для дома)</li>
+        <li>Специальные предложения и акции для оптовых покупателей</li>
+        <li>Сезонные скидки и распродажи</li>
+        <li>Новости бренда IMMAAH и обновления ассортимента</li>
+        <li>Информационные письма о расширении товарной линейки</li>
+      </ul>
+
+      <h2>2. Каналы рассылки</h2>
+      <p>Рекламные материалы могут направляться по следующим каналам:</p>
+      <ul>
+        <li>Электронная почта (email)</li>
+        <li>Мессенджеры (Telegram, WhatsApp) — при наличии контакта</li>
+        <li>SMS-сообщения — при наличии номера телефона</li>
+      </ul>
+
+      <h2>3. Периодичность рассылки</h2>
+      <p>Рассылка осуществляется не чаще 2 раз в неделю. Отправитель оставляет за собой право изменять частоту рассылки с предварительным уведомлением Субъекта.</p>
+
+      <h2>4. Право на отказ от рассылки</h2>
+      <p>Субъект вправе в любой момент отказаться от получения рекламных материалов следующими способами:</p>
+      <ul>
+        <li>Перейдя по ссылке «Отписаться» в любом полученном письме</li>
+        <li>Направив запрос на email: <strong>immaah.home@mail.ru</strong> с темой «Отписка от рассылки»</li>
+        <li>Написав в Telegram или WhatsApp: +7 (985) 715-06-58</li>
+      </ul>
+      <p>Отказ от рассылки обрабатывается в течение 5 рабочих дней. Отказ от рекламной рассылки не влечёт прекращения обработки персональных данных, необходимых для исполнения договора.</p>
+
+      <h2>5. Обработка персональных данных для целей рассылки</h2>
+      <p>Для организации рассылки Отправитель обрабатывает следующие данные:</p>
+      <ul>
+        <li>Адрес электронной почты</li>
+        <li>Номер телефона (при наличии)</li>
+        <li>Имя (для персонализации обращения)</li>
+      </ul>
+      <p>Данные используются исключительно для целей рекламной рассылки и не передаются третьим лицам без согласия Субъекта, за исключением случаев, предусмотренных законодательством.</p>
+
+      <h2>6. Отправитель рассылки</h2>
+      <p>
+        ИП Цицкиева Хатчат Магомедовна<br>
+        ИНН: 060700271981<br>
+        ОГРНИП: 322060000000636<br>
+        Адрес: 386433, Россия, РИ, Джейрахский р-н, с. Армхи, ул. Д.Льянова, д. 56<br>
+        Email: immaah.home@mail.ru<br>
+        Телефон: +7 (985) 715-06-58
+      </p>
+
+      <h2>7. Добровольность Согласия</h2>
+      <p>Настоящее Согласие является добровольным. Отказ от получения рекламной рассылки не влечёт никаких правовых последствий для Субъекта и не является основанием для отказа в обслуживании или иных ограничений.</p>
     </div>
   </div>
 </section>
@@ -142,21 +170,5 @@
 </footer>
 
 <script src="js/main.js"></script>
-<script>
-  // Clear cart after order
-  localStorage.removeItem('immaah_cart');
-  // Random order number
-  document.getElementById('order-num').textContent = Math.floor(100000 + Math.random() * 900000);
-</script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
